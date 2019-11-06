@@ -1,0 +1,131 @@
+<resources>
+    <string name="app_name">Picha Clear</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <string name="wait">Please Wait...</string>
+    <string name="okay">Ok</string>
+
+
+    <string name="signup">Sign Up</string>
+    <string name="signin">Sign In</string>
+    <string name="login">Log In</string>
+
+    <string name="id_number">ID Number</string>
+    <string name="password">Password</string>
+    <string name="newuser">New User?</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="phone_no">Phone Number (07...)</string>
+    <string name="retype_password">Confirm password</string>
+    <string name="existing">Existing User?</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="network_not_connected">Network error</string>
+
+    <string name="days">Days</string>
+    <string name="daystohire">Days For Hire</string>
+    <string name="addtocart">Add To Cart</string>
+    <string name="viewcart">View Cart</string>
+    <string name="instock">In Stock</string>
+    <string name="outofstock">Out Of Stock</string>
+    <string name="qty">Qty</string>
+    <string name="itemqty">Item Qty</string>
+    <string name="editcart">Add Quantity Details</string>
+
+    <string name="add_to_cart">Successfully added into cart.</string>
+    <string name="fail_add_to_cart"> Unable to add into cart.Please try again</string>
+    <string name="network_error">Please try again. Network not responding</string>
+    <string name="continue_tag">Continue</string>
+
+    <string name="fail_todeletecart">Failed to delete cart item</string>
+    <string name="fail_toeditcart">Failed to edit cart</string>
+    <string name="you_have">You have</string>
+    <string name="product_in_cart">Products In Cart</string>
+
+    <string name="prod_name">Product</string>
+    <string name="price">Price</string>
+    <string name="cart_subtotal">Sub Total</string>
+    <string name="shipping_fee">Shipping fee</string>
+    <string name="order_total">Order Total</string>
+    <string name="place_order">Place Order</string>
+    <string name="fail_toordersummery">failed to get order summary</string>
+
+
+    <string name="fail_togetaddress">Failed to get address</string>
+    <string name="select_address">Please selec an address</string>
+
+
+    <string name="country">Kenya</string>
+    <string name="address_line1">Address 1</string>
+    <string name="address_line2">Address 2(optional)</string>
+    <string name="city">County</string>
+    <string name="pincode">code</string>
+    <string name="state">Town</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="save_continue">Save &amp; Continue</string>
+
+    <string name="fail_toaddaddress">Failed to add address</string>
+    <string-array name="county_arrays">
+        <item>Mombasa</item>
+        <item>Nairobi</item>
+        <item>Kisumu</item>
+        <item>Nyeri</item>
+        <item>Meru</item>
+        <item>Kiambu</item>
+        <item>Embu</item>
+        <item>Migori</item>
+    </string-array>
+    <string name="add_address">Add address</string>
+    <string name="full_name">Full Name</string>
+
+
+    <string name="cash_on_delivery">Cash On Delivery</string>
+    <string name="paymentGateway">Instant Pay</string>
+    <string name="ksh">Ksh</string>
+
+    <string name="thankyou">Thank You</string>
+    <string name="your_orderPlaced">Your Order Has \n Been Received</string>
+    <string name="we_will_inform_you">We will  SMS you \n about your order info and delivery date.</string>
+    <string name="continue_shipping">Continue Shopping</string>
+    <string name="order_history">order history</string>
+    <string name="lipanampesa">lipa Na Mpesa</string>
+    <string name="view_details">view details</string>
+    <string name="pricetag">price</string>
+    <string name="orderid">order id</string>
+    <string name="orderinformation">order information</string>
+    <string name="fail_toorderhistory">failed  to get order history</string>
+    <string name="select">Select payment option</string>
+    <string name="failorder">transaction unsuccessful</string>
+
+    <string name="orderinfo">Continue to make payment upon admin approval</string>
+    <string name="pay">Make Payment  </string>
+    <string name="amount">Enter amount  \n payment should be at least 50% of the total amount</string>
+
+    <string name="thanks">Thank You For Joining us</string>
+    <string name="thankshop">Thank You For Shopping With us</string>
+    <string name="your_request">Please Wait \n For Admin Approval</string>
+    <string name="paynow">Please make your payment here upon order approval </string>
+
+    <string name="paynow3">Make your payment here \n it should constitute shipping fee only</string>
+    <string name="payments">Your payment is successful\n Kindly Wait for Delivery \nPlease check your order details for updates </string>
+    <string name="amounts">Amount</string>
+    <string name="billing_addrss">Address</string>
+
+    <string name="add_tag">Add Products</string>
+
+
+</resources>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/cart_count"
+            android:padding="@dimen/padding_small"
+            android:layout_alignParentTop="true"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/recycler_cartitem"
+            android:layout_below="@id/cart_count"
+            android:layout_above="@+id/layout_2">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout_2"
+            android:padding="@dimen/padding_medium"
+            android:layout_alignParentBottom="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_large">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/addbtn"
+                    android:layout_weight="1"
+                    android:layout_gravity="start"
+                    android:text="@string/add_tag"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/rounded_blue"
+                    android:textColor="@color/white"
+                    />
+
+
+                <TextView
+                    android:id="@+id/cart_totalamt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/padding_small"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/continuebtn"
+                    android:text="@string/continue_tag"
+                    android:gravity="center_horizontal"
+                    android:background="@drawable/rounded_blue"
+                    android:layout_gravity="end"
+                    android:textColor="@color/white"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="1"
+                   />
+
+
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
