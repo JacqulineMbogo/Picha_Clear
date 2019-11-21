@@ -6,6 +6,9 @@
     android:background="@color/white"
     android:layout_height="match_parent">
 
+
+
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
@@ -94,7 +97,6 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:paddingTop="@dimen/padding_small"
                 android:paddingBottom="@dimen/padding_medium">
 
@@ -106,7 +108,6 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/frag_container"
                 android:orientation="horizontal"
-                android:layout_marginBottom="@dimen/padding_too_large"
                 android:background="@color/white">
 
                 <Button
