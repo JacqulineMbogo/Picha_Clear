@@ -101,7 +101,7 @@
     <string name="your_orderPlaced">Your Order Has \n Been Received</string>
     <string name="we_will_inform_you">We will  SMS you \n about your order info and delivery date.</string>
     <string name="continue_shipping">Continue Shopping</string>
-    <string name="order_history">order history</string>
+    <string name="order_history">Hire history</string>
     <string name="lipanampesa">lipa Na Mpesa</string>
     <string name="view_details">view details</string>
     <string name="pricetag">price</string>
@@ -126,6 +126,8 @@
     <string name="billing_addrss">Address</string>
 
     <string name="add_tag">Add Products</string>
+    <string name="bookings">My Bookings</string>
+    <string name="new_booking">New Booking</string>
 
 
 </resources>

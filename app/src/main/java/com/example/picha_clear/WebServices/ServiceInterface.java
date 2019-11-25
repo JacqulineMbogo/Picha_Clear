@@ -4,6 +4,7 @@ package com.example.picha_clear.WebServices;
 
 import com.example.picha_clear.beanResponse.AddNewAddress;
 import com.example.picha_clear.beanResponse.AddtoCart;
+import com.example.picha_clear.beanResponse.BookingsRes;
 import com.example.picha_clear.beanResponse.CamerasProductRes;
 import com.example.picha_clear.beanResponse.DronesProductRes;
 import com.example.picha_clear.beanResponse.EditCartItem;
@@ -223,6 +224,15 @@ public interface ServiceInterface {
             @Part("status") RequestBody status
 
     );
+    // get booking summery
+    @Multipart
+    @POST("picha_clear/getbookingsummary.php")
+    Call<BookingsRes> BookingsRescall(
+            @Part("securecode") RequestBody securecode,
+            @Part("user_id") RequestBody user_id
+
+    );
+
 
 }
 

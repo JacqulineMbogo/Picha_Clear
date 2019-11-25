@@ -5,6 +5,7 @@ import com.example.picha_clear.BuildConfig;
 import com.example.picha_clear.Utility.Constant;
 import com.example.picha_clear.beanResponse.AddNewAddress;
 import com.example.picha_clear.beanResponse.AddtoCart;
+import com.example.picha_clear.beanResponse.BookingsRes;
 import com.example.picha_clear.beanResponse.CamerasProductRes;
 import com.example.picha_clear.beanResponse.DronesProductRes;
 import com.example.picha_clear.beanResponse.EditCartItem;
@@ -175,6 +176,11 @@ public class ServiceWrapper  {
 
     public Call<receiveAPI> receivecall(String securcode, String order_id , String status){
         return mServiceInterface. receivecall(convertPlainString(securcode), convertPlainString(order_id) , convertPlainString(status) );
+    }
+
+    // get booking summery
+    public Call<BookingsRes> BookingsRescall(String securcode, String user_id){
+        return mServiceInterface.BookingsRescall(convertPlainString(securcode), convertPlainString(user_id) );
     }
 
 

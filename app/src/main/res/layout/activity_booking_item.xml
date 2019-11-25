@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/padding_medium"
+    android:paddingTop="@dimen/padding_small"
+    android:paddingBottom="@dimen/padding_small"
+    android:paddingLeft="@dimen/padding_medium"
+    android:paddingRight="@dimen/padding_medium"
+    android:background="@drawable/rounder_corner_black">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/order_id_txt"
+        android:text="Booking Number "
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:layout_marginRight="@dimen/padding_medium"
+        android:textStyle="normal|bold"
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/padding_small"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/booking_id"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/order_id_txt"
+        android:layout_marginBottom="@dimen/padding_small"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/order_address_txt"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:text="Scheduled date "
+        android:textColor="@color/black"
+        android:layout_below="@id/order_id_txt"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/padding_small"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/booking_set_date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/grey"
+        android:layout_below="@id/booking_id"
+        android:layout_toRightOf="@id/order_address_txt"
+        android:layout_marginBottom="@dimen/padding_small"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/booking_duration"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        android:layout_below="@id/order_address_txt"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="@dimen/padding_small"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/booking_type"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/grey"
+        android:layout_below="@id/booking_set_date"
+        android:layout_toRightOf="@id/booking_duration"
+        android:layout_marginBottom="@dimen/padding_small"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/order_date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/padding_small"
+        android:layout_marginTop="@dimen/padding_small"/>
+
+    <TextView
+        android:id="@+id/receiptstext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_date"
+
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="10dp"
+
+        android:layout_marginBottom="@dimen/padding_small"
+        android:gravity="start"
+        android:text="status:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/colorAccent"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+
+        android:id="@+id/booking_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_date"
+        android:layout_marginTop="34dp"
+
+        android:layout_marginBottom="@dimen/padding_small"
+        android:layout_toEndOf="@+id/receiptstext"
+
+        android:text="Payment Status"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/receiptstext" />
+
+    <TextView
+
+        android:id="@+id/viewdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_date"
+        android:layout_marginTop="34dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/padding_small"
+        android:gravity="end"
+        android:text="@string/view_details"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true" />
+
+
+
+</RelativeLayout>

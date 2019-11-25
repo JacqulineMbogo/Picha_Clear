@@ -1,9 +1,14 @@
 package com.example.picha_clear;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,14 +16,18 @@ import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.picha_clear.Bookings.bookings;
 import com.example.picha_clear.Main.Cameras_Adapter;
 import com.example.picha_clear.Main.Cameras_Model;
 import com.example.picha_clear.Main.Drones_Adapter;
 import com.example.picha_clear.Main.Drones_Model;
 import com.example.picha_clear.Main.Lenses_Adapter;
 import com.example.picha_clear.Main.Lenses_Model;
+import com.example.picha_clear.MyAccount.OrderHistory;
 import com.example.picha_clear.Utility.AppUtilits;
+import com.example.picha_clear.Utility.Constant;
 import com.example.picha_clear.Utility.NetworkUtility;
+import com.example.picha_clear.Utility.SharedPreferenceActivity;
 import com.example.picha_clear.WebServices.ServiceWrapper;
 import com.example.picha_clear.beanResponse.CamerasProductRes;
 import com.example.picha_clear.beanResponse.DronesProductRes;
@@ -33,6 +42,8 @@ import retrofit2.Response;
 public class Home extends AppCompatActivity {
 
     private String TAG = "MainActivity";
+    Context context;
+    SharedPreferenceActivity sharedPreferenceActivity;
 
     private RecyclerView recycler_cameras, recycler_drones, recycler_lenses;
 
@@ -47,6 +58,8 @@ public class Home extends AppCompatActivity {
     private Cameras_Adapter newCameras_adapter;
     private Drones_Adapter newDrones_adapter;
     private Lenses_Adapter newLenses_adapter;
+    public TextView phonenumber,f_name,l_name,user_name,user_id,e_mail;
+    private Button hirehistory, bookingss;
 
 
 
@@ -55,10 +68,45 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        context=this;
+        sharedPreferenceActivity = new SharedPreferenceActivity(context);
 
         recycler_cameras =(RecyclerView)findViewById(R.id.recycler_cameras);
         recycler_drones = findViewById(R.id.recycler_drones);
         recycler_lenses = findViewById(R.id.recycler_lenses);
+        phonenumber = findViewById(R.id.phonenumber);
+        f_name = findViewById(R.id.f_name);
+        l_name = findViewById(R.id.l_name);
+        user_name = findViewById(R.id.user_name);
+        user_id = findViewById(R.id.user_id);
+        e_mail = findViewById(R.id.e_mail);
+        hirehistory= findViewById(R.id.hirehistory);
+        bookingss= findViewById(R.id.bookings);
+
+        hirehistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent4 = new Intent(context, OrderHistory.class);
+                startActivity(intent4);
+            }
+        });
+        bookingss.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent4 = new Intent(context, bookings.class);
+                startActivity(intent4);
+            }
+        });
+
+
+
+        phonenumber.setText("Phone Number:"+ sharedPreferenceActivity.getItem(Constant.USER_phone));
+        f_name.setText("First Name: "+sharedPreferenceActivity.getItem(Constant.FIRST_NAME));
+        l_name.setText("Last Name: "+sharedPreferenceActivity.getItem(Constant.LAST_NAME));
+        user_name.setText("Username:"+sharedPreferenceActivity.getItem(Constant.USER_name));
+        user_id.setText("ID Number"+sharedPreferenceActivity.getItem(Constant.ID_NUMBER));
+        e_mail.setText("Email: "+sharedPreferenceActivity.getItem(Constant.USER_email));
+
 
 
         //Cameras
