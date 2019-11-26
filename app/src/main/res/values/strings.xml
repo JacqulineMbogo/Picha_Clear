@@ -128,6 +128,12 @@
     <string name="add_tag">Add Products</string>
     <string name="bookings">My Bookings</string>
     <string name="new_booking">New Booking</string>
+    <string name="booking_type">Type</string>
+    <string name="location">Location</string>
+    <string name="duration">Duration ( In hours)</string>
+    <string name="date">Date</string>
+    <string name="book">Confirm</string>
+    <string name="time">Time</string>
 
 
 </resources>

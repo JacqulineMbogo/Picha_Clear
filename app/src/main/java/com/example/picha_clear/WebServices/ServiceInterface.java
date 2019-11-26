@@ -4,18 +4,22 @@ package com.example.picha_clear.WebServices;
 
 import com.example.picha_clear.beanResponse.AddNewAddress;
 import com.example.picha_clear.beanResponse.AddtoCart;
+import com.example.picha_clear.beanResponse.BookingsPaymentRes;
 import com.example.picha_clear.beanResponse.BookingsRes;
 import com.example.picha_clear.beanResponse.CamerasProductRes;
 import com.example.picha_clear.beanResponse.DronesProductRes;
 import com.example.picha_clear.beanResponse.EditCartItem;
 import com.example.picha_clear.beanResponse.GetAddress;
 import com.example.picha_clear.beanResponse.GetOrderProductDetails;
+import com.example.picha_clear.beanResponse.LocationRes;
+import com.example.picha_clear.beanResponse.NewBookingsRes;
 import com.example.picha_clear.beanResponse.NewUserRegistration;
 import com.example.picha_clear.beanResponse.LensesProductRes;
 import com.example.picha_clear.beanResponse.OrderHistoryAPI;
 import com.example.picha_clear.beanResponse.OrderSummary;
 import com.example.picha_clear.beanResponse.PlaceOrder;
 import com.example.picha_clear.beanResponse.ProductDetail_Res;
+import com.example.picha_clear.beanResponse.TypesRes;
 import com.example.picha_clear.beanResponse.UserSignInRes;
 import com.example.picha_clear.beanResponse.clearbalanceAPI;
 import com.example.picha_clear.beanResponse.codeAPI;
@@ -231,6 +235,45 @@ public interface ServiceInterface {
             @Part("securecode") RequestBody securecode,
             @Part("user_id") RequestBody user_id
 
+    );
+
+    // make new booking
+    @Multipart
+    @POST("picha_clear/make_booking.php")
+    Call<NewBookingsRes> NewBookingsRescall(
+            @Part("securecode") RequestBody securecode,
+            @Part("user_id") RequestBody user_id,
+            @Part("booking_type") RequestBody booking_type,
+            @Part("date_set") RequestBody date_set,
+            @Part("duration") RequestBody duration,
+            @Part("total_price") RequestBody total_price
+
+    );
+
+    // make new booking payment
+    @Multipart
+    @POST("picha_clear/make_booking_payment.php")
+    Call<BookingsPaymentRes> NewBookingPaymentRescall(
+            @Part("securecode") RequestBody securecode,
+            @Part("user_id") RequestBody user_id,
+            @Part("booking_id") RequestBody booking_id,
+            @Part("code") RequestBody code,
+             @Part("payment_amount") RequestBody payment_amount
+
+    );
+
+    // get locations
+    @Multipart
+    @POST("picha_clear/getlocation.php")
+    Call<LocationRes> LocationResCall(
+            @Part("securecode") RequestBody securecode
+    );
+
+    // get TYPES
+    @Multipart
+    @POST("picha_clear/getTypes.php")
+    Call<TypesRes> TypesResCall(
+            @Part("securecode") RequestBody securecode
     );
 
 

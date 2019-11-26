@@ -5,18 +5,22 @@ import com.example.picha_clear.BuildConfig;
 import com.example.picha_clear.Utility.Constant;
 import com.example.picha_clear.beanResponse.AddNewAddress;
 import com.example.picha_clear.beanResponse.AddtoCart;
+import com.example.picha_clear.beanResponse.BookingsPaymentRes;
 import com.example.picha_clear.beanResponse.BookingsRes;
 import com.example.picha_clear.beanResponse.CamerasProductRes;
 import com.example.picha_clear.beanResponse.DronesProductRes;
 import com.example.picha_clear.beanResponse.EditCartItem;
 import com.example.picha_clear.beanResponse.GetAddress;
 import com.example.picha_clear.beanResponse.GetOrderProductDetails;
+import com.example.picha_clear.beanResponse.LocationRes;
+import com.example.picha_clear.beanResponse.NewBookingsRes;
 import com.example.picha_clear.beanResponse.NewUserRegistration;
 import com.example.picha_clear.beanResponse.LensesProductRes;
 import com.example.picha_clear.beanResponse.OrderHistoryAPI;
 import com.example.picha_clear.beanResponse.OrderSummary;
 import com.example.picha_clear.beanResponse.PlaceOrder;
 import com.example.picha_clear.beanResponse.ProductDetail_Res;
+import com.example.picha_clear.beanResponse.TypesRes;
 import com.example.picha_clear.beanResponse.UserSignInRes;
 import com.example.picha_clear.beanResponse.clearbalanceAPI;
 import com.example.picha_clear.beanResponse.codeAPI;
@@ -181,6 +185,27 @@ public class ServiceWrapper  {
     // get booking summery
     public Call<BookingsRes> BookingsRescall(String securcode, String user_id){
         return mServiceInterface.BookingsRescall(convertPlainString(securcode), convertPlainString(user_id) );
+    }
+
+    // make new booking
+    public Call<NewBookingsRes> NewBookingsRescall(String securcode, String user_id , String booking_type,  String date_set, String duration , String total_price ){
+        return mServiceInterface.NewBookingsRescall(convertPlainString(securcode), convertPlainString(user_id), convertPlainString(booking_type),  convertPlainString(date_set),  convertPlainString(duration),  convertPlainString(total_price) );
+    }
+
+    // make new booking payment
+    public Call<BookingsPaymentRes> NewBookingPaymentRescall(String securcode, String user_id , String booking_id, String code,String payment_amount ){
+        return mServiceInterface.NewBookingPaymentRescall(convertPlainString(securcode), convertPlainString(user_id), convertPlainString(booking_id),  convertPlainString(code),  convertPlainString(payment_amount) );
+    }
+
+    ///  get location
+    public Call<LocationRes> LocationResCall(String securcode){
+        return mServiceInterface.LocationResCall(convertPlainString(securcode));
+    }
+
+
+    ///  get types
+    public Call<TypesRes> TypesResCall(String securcode){
+        return mServiceInterface.TypesResCall(convertPlainString(securcode));
     }
 
 

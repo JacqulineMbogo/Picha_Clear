@@ -54,9 +54,9 @@ public class bookings_adapter  extends RecyclerView.Adapter<RecyclerView.ViewHol
         final bookings_m0del model = bookings_models.get(position);
 
         ((BookingHistoryItemView) holder).booking_id.setText(model.getBooking_id());
-        ((BookingHistoryItemView) holder).booking_type.setText(model.getBooking_type());
+        ((BookingHistoryItemView) holder).booking_type.setText("Type :" +" " + model.getBooking_type());
         ((BookingHistoryItemView) holder).booking_set_date.setText(model.getBooking_date_set());
-        ((BookingHistoryItemView) holder).booking_duration.setText(model.getBooking_duration());
+        ((BookingHistoryItemView) holder).booking_duration.setText("Hours : " + " " + model.getBooking_duration());
         ((BookingHistoryItemView) holder).Booking_status.setText(model.getBooking_status());
     }
 
