@@ -246,7 +246,8 @@ public interface ServiceInterface {
             @Part("booking_type") RequestBody booking_type,
             @Part("date_set") RequestBody date_set,
             @Part("duration") RequestBody duration,
-            @Part("total_price") RequestBody total_price
+            @Part("total_price") RequestBody total_price,
+            @Part("location_id") RequestBody location_id
 
     );
 

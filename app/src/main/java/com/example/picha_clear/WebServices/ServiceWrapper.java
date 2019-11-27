@@ -188,8 +188,8 @@ public class ServiceWrapper  {
     }
 
     // make new booking
-    public Call<NewBookingsRes> NewBookingsRescall(String securcode, String user_id , String booking_type,  String date_set, String duration , String total_price ){
-        return mServiceInterface.NewBookingsRescall(convertPlainString(securcode), convertPlainString(user_id), convertPlainString(booking_type),  convertPlainString(date_set),  convertPlainString(duration),  convertPlainString(total_price) );
+    public Call<NewBookingsRes> NewBookingsRescall(String securcode, String user_id , String booking_type,  String date_set, String duration , String total_price, String location_id ){
+        return mServiceInterface.NewBookingsRescall(convertPlainString(securcode), convertPlainString(user_id), convertPlainString(booking_type),  convertPlainString(date_set),  convertPlainString(duration),  convertPlainString(total_price) ,  convertPlainString(location_id) );
     }
 
     // make new booking payment

@@ -121,7 +121,7 @@ public class bookings extends AppCompatActivity {
                 public void onFailure(Call<BookingsRes> call, Throwable t) {
 
                     Log.e(TAG, "  fail- order symmer item "+ t.toString());
-                    AppUtilits.displayMessage(bookings.this, getString(R.string.fail_toordersummery));
+                    AppUtilits.displayMessage(bookings.this, "Failed to get bookings");
 
 
                 }

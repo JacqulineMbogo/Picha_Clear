@@ -78,6 +78,7 @@
             android:autofillHints="Date" />
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/dateimage"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@mipmap/schedule"
@@ -112,6 +113,7 @@
             android:autofillHints="Date" />
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/timeimage"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@mipmap/stopwatch"
@@ -148,6 +150,7 @@
 
 
 <Button
+    android:id="@+id/confirm"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@drawable/rounded_blue"
