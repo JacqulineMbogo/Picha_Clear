@@ -22,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.picha_clear.R;
 import com.example.picha_clear.Utility.AppUtilits;
 import com.example.picha_clear.Utility.Constant;
+import com.example.picha_clear.Utility.DataValidation;
 import com.example.picha_clear.Utility.NetworkUtility;
 import com.example.picha_clear.Utility.SharedPreferenceActivity;
 import com.example.picha_clear.WebServices.ServiceWrapper;
@@ -132,7 +133,7 @@ public class bookings_adapter  extends RecyclerView.Adapter<RecyclerView.ViewHol
                                         dialogWindow.clearFlags(WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_ALT_FOCUSABLE_IM);
                                         dialogWindow.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_VISIBLE);
 
-                                        final EditText amount = view.findViewById(R.id.total_amount);
+
                                         final TextView paymenttext = view.findViewById(R.id.paymenttext);
                                         final EditText mpesacode = view.findViewById(R.id.mpesacode);
                                         final EditText total_amount = view.findViewById(R.id.total_amount);
@@ -185,7 +186,35 @@ public class bookings_adapter  extends RecyclerView.Adapter<RecyclerView.ViewHol
                                             @Override
                                             public void onClick(View v) {
 
-                                                makebookingpay();
+                                                if (!total_amount.getText().toString().isEmpty()){
+
+                                                    if (!mpesacode.getText().toString().isEmpty()){
+
+                                                        if (!DataValidation.isNotValidcode(mpesacode.getText().toString())) {
+
+                                                            makebookingpay();
+
+                                                        }else{
+
+                                                            mpesacode.setError("Invalid code length. Should be 10 characters.");
+                                                            mpesacode.requestFocus();
+
+                                                        }
+                                                    }else{
+
+                                                        mpesacode.setError("please input transaction code");
+                                                        mpesacode.requestFocus();
+
+                                                    }
+
+                                                }else{
+                                                    total_amount.setError("please input amount");
+                                                    total_amount.requestFocus();
+
+
+
+                                                }
+
                                             }
 
                                             private void makebookingpay() {

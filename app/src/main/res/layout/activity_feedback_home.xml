@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/r2"
+            android:layout_marginTop="@dimen/padding_extralarge"
+            android:padding="@dimen/padding_small"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/l1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_small"
+                android:text="@string/opinion"
+                android:gravity="center"
+                android:layout_marginEnd="@dimen/padding_large"
+                android:textColor="@color/black"
+                android:textStyle="normal|bold"
+                android:layout_marginRight="@dimen/padding_large" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/title"
+                android:layout_below="@id/l1"
+                android:layout_marginRight="@dimen/padding_too_large"
+                android:layout_marginLeft="@dimen/padding_too_large"
+                android:layout_marginTop="@dimen/padding_extralarge"
+                android:paddingLeft="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small"
+                android:hint="Title..."/>
+
+
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/comment"
+                android:layout_below="@id/title"
+                android:layout_marginRight="@dimen/padding_too_large"
+                android:layout_marginLeft="@dimen/padding_too_large"
+                android:layout_marginTop="@dimen/padding_extralarge"
+                android:paddingLeft="@dimen/padding_small"
+                android:paddingTop="@dimen/padding_small"
+                android:hint="Comment"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/send"
+                android:text="Submit"
+                android:gravity="center_horizontal"
+                android:background="@drawable/rounded_gold"
+                android:textColor="@color/black"
+                android:layout_below="@id/comment"
+                android:layout_marginRight="@dimen/padding_too_large"
+                android:layout_marginLeft="@dimen/padding_too_large"
+                android:layout_marginTop="@dimen/padding_extralarge"/>
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

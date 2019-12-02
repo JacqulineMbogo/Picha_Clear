@@ -128,10 +128,36 @@ public class newbooking extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    total_price =  (Integer.valueOf(sharedPreferenceActivity.getItem(Constant.TYPE_PRICE)) * Integer.valueOf(duration.getText().toString())) + Integer.valueOf (sharedPreferenceActivity.getItem(Constant.LOCATION_PRICE)) ;
 
-                    Log.d("typepriceee", String.valueOf(total_price));
-                    makebooking();
+
+
+
+                    if (!date.getText().toString().isEmpty()){
+                        if (!time.getText().toString().isEmpty()){
+                            if (!duration.getText().toString().isEmpty()){
+
+                                total_price =  (Integer.valueOf(sharedPreferenceActivity.getItem(Constant.TYPE_PRICE)) * Integer.valueOf(duration.getText().toString())) + Integer.valueOf (sharedPreferenceActivity.getItem(Constant.LOCATION_PRICE)) ;
+
+                                Log.d("typepriceee", String.valueOf(total_price));
+                                makebooking();
+
+                            }else{
+
+                                ((EditText)findViewById(R.id.duration)).setError("please input duration ");
+                                (findViewById(R.id.duration)).requestFocus();
+                            }
+                        }  else{
+                            ((EditText)findViewById(R.id.time)).setError("please input time");
+                            (findViewById(R.id.time)).requestFocus();
+
+                        }
+                    }else{
+
+                        ((EditText)findViewById(R.id.date)).setError("please input date ");
+                        (findViewById(R.id.date)).requestFocus();
+
+                    }
+
 
                 }
             });

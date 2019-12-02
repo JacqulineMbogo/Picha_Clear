@@ -129,7 +129,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="@dimen/padding_small"
         android:gravity="end"
-        android:text="@string/view_details"
+        android:text="@string/makepayments"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/colorAccent"
         android:textStyle="bold"
