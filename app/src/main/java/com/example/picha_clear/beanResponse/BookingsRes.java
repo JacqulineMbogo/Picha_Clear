@@ -77,6 +77,12 @@ public class BookingsRes {
         @SerializedName("status")
         @Expose
         private String status;
+        @SerializedName("total_price")
+        @Expose
+        private String totalPrice;
+        @SerializedName("location")
+        @Expose
+        private String location;
 
         public String getId() {
             return id;
@@ -124,6 +130,20 @@ public class BookingsRes {
 
         public void setStatus(String status) {
             this.status = status;
+        }
+        public String getTotalPrice() {
+            return totalPrice;
+        }
+
+        public void setTotalPrice(String totalPrice) {
+            this.totalPrice = totalPrice;
+        }
+        public String getLocation() {
+            return location;
+        }
+
+        public void setLocation(String location) {
+            this.location = location;
         }
 
     }

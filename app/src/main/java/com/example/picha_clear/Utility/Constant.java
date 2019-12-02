@@ -25,7 +25,10 @@ public class Constant {
     public static final String USER_phone = "USER_phone";
     public static final String USER_staffphone = "USER_staffphone";
     public static final String TOTAL_TOTAL = "0";
+    public static final String TYPE_PRICE = "type_price";
+    public static final String LOCATION_PRICE = "location_price";
     public static final String pin = "0";
+
 
     public static final int     TOASTER_SHORT            =   Toast.LENGTH_SHORT;
 

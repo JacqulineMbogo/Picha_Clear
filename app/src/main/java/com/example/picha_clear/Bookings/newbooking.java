@@ -22,11 +22,13 @@ import androidx.appcompat.widget.AppCompatImageView;
 
 import com.example.picha_clear.R;
 import com.example.picha_clear.Spinner_Adapter;
+import com.example.picha_clear.Spinner_Adapter2;
 import com.example.picha_clear.Utility.AppUtilits;
 import com.example.picha_clear.Utility.Constant;
 import com.example.picha_clear.Utility.NetworkUtility;
 import com.example.picha_clear.Utility.SharedPreferenceActivity;
 import com.example.picha_clear.WebServices.ServiceWrapper;
+import com.example.picha_clear.beanResponse.BookingsPaymentRes;
 import com.example.picha_clear.beanResponse.LocationRes;
 import com.example.picha_clear.beanResponse.NewBookingsRes;
 import com.example.picha_clear.beanResponse.TypesRes;
@@ -126,6 +128,9 @@ public class newbooking extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
+                    total_price =  (Integer.valueOf(sharedPreferenceActivity.getItem(Constant.TYPE_PRICE)) * Integer.valueOf(duration.getText().toString())) + Integer.valueOf (sharedPreferenceActivity.getItem(Constant.LOCATION_PRICE)) ;
+
+                    Log.d("typepriceee", String.valueOf(total_price));
                     makebooking();
 
                 }
@@ -141,6 +146,9 @@ public class newbooking extends AppCompatActivity {
 
                 type_pin= typesModels.get(position).getType_id();
                 type_price  = typesModels.get(position).getType_cost();
+                Log.d("typeprice", sharedPreferenceActivity.getItem(Constant.TYPE_PRICE));
+
+                sharedPreferenceActivity.putItem(Constant.TYPE_PRICE, type_price.trim());
 
                 Log.d("counts", type_pin);
 
@@ -159,6 +167,8 @@ public class newbooking extends AppCompatActivity {
 
               location_pin= locationModels.get(position).getLocation_id();
               location_price = locationModels.get(position).getLocation_price();
+              sharedPreferenceActivity.putItem(Constant.LOCATION_PRICE, location_price.trim());
+                Log.d("typepricee", sharedPreferenceActivity.getItem(Constant.LOCATION_PRICE));
 
                 Log.d("countss", location_pin);
 
@@ -170,7 +180,9 @@ public class newbooking extends AppCompatActivity {
             }
         });
 
-        //total_price =  (Integer.valueOf(type_price) * Integer.valueOf(duration.getText().toString())) + Integer.valueOf (location_price ) ;
+     Log.d("typeprice", sharedPreferenceActivity.getItem(Constant.TYPE_PRICE));
+      Log.d("typepricee", sharedPreferenceActivity.getItem(Constant.LOCATION_PRICE));
+
 
     }
 
@@ -213,9 +225,9 @@ public class newbooking extends AppCompatActivity {
                                     Log.d("codee", name[i]);
                                 }
 
-                                Spinner_Adapter spinner_adapter= new Spinner_Adapter(context, code, name);
-                                spinner_adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                             type_spinner.setAdapter(spinner_adapter);
+                                Spinner_Adapter2 spinner_adapter2= new Spinner_Adapter2(context, code, name);
+                                spinner_adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                             type_spinner.setAdapter(spinner_adapter2);
 
                             }
 
@@ -326,7 +338,7 @@ public class newbooking extends AppCompatActivity {
         } else {
 
             ServiceWrapper serviceWrapper = new ServiceWrapper(null);
-            Call<NewBookingsRes> NewBookingsRescall = serviceWrapper.NewBookingsRescall( "1234",sharedPreferenceActivity.getItem(Constant.USER_DATA),type_pin,date.getText().toString() +" " + time.getText().toString(),duration.getText().toString(), " " ,location_pin);
+            Call<NewBookingsRes> NewBookingsRescall = serviceWrapper.NewBookingsRescall( "1234",sharedPreferenceActivity.getItem(Constant.USER_DATA),type_pin,date.getText().toString() +" " + time.getText().toString(),duration.getText().toString(), String.valueOf(total_price) ,location_pin);
             NewBookingsRescall.enqueue(new Callback<NewBookingsRes>() {
                 @Override
                 public void onResponse(Call<NewBookingsRes> call, Response<NewBookingsRes> response) {
@@ -365,4 +377,5 @@ public class newbooking extends AppCompatActivity {
 
 
     }
+
 }

@@ -134,6 +134,13 @@
     <string name="date">Date</string>
     <string name="book">Confirm</string>
     <string name="time">Time</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Okay</string>
+    <string name="payment">Payments</string>
+    <string name="total_amount">total_amount</string>
+    <string name="Amount">Amount</string>
+    <string name="mpesacode">M_pesa Code</string>
+    <string name="clearbalance">Clear Balance</string>
 
 
 </resources>

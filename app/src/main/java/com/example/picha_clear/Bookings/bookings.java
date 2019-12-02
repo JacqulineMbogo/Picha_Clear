@@ -62,7 +62,7 @@ public class bookings extends AppCompatActivity {
         bookings_recyclerview.setLayoutManager(mLayoutManger3);
         bookings_recyclerview.setItemAnimator(new DefaultItemAnimator());
 
-       bookingsAdapter= new bookings_adapter(bookingsModels, this);
+       bookingsAdapter= new bookings_adapter(bookingsModels, this, sharedPreferenceActivity);
         bookings_recyclerview.setAdapter(bookingsAdapter);
 
         newbooking.setOnClickListener(new View.OnClickListener() {
@@ -101,7 +101,7 @@ public class bookings extends AppCompatActivity {
                             for (int i=0; i<response.body().getInformation().getBookingDetails().size(); i++){
 
 
-                                bookingsModels.add( new bookings_m0del(response.body().getInformation().getBookingDetails().get(i).getId(),response.body().getInformation().getBookingDetails().get(i).getType(),response.body().getInformation().getBookingDetails().get(i).getDateCreated(),response.body().getInformation().getBookingDetails().get(i).getDateSet(),response.body().getInformation().getBookingDetails().get(i).getDuration(),response.body().getInformation().getBookingDetails().get(i).getStatus() ));
+                                bookingsModels.add( new bookings_m0del(response.body().getInformation().getBookingDetails().get(i).getId(),response.body().getInformation().getBookingDetails().get(i).getType(),response.body().getInformation().getBookingDetails().get(i).getDateCreated(),response.body().getInformation().getBookingDetails().get(i).getDateSet(),response.body().getInformation().getBookingDetails().get(i).getDuration(),response.body().getInformation().getBookingDetails().get(i).getStatus(),response.body().getInformation().getBookingDetails().get(i).getTotalPrice(),response.body().getInformation().getBookingDetails().get(i).getLocation() ));
 
                             }
 
@@ -109,7 +109,7 @@ public class bookings extends AppCompatActivity {
 
 
                         } else {
-                            AppUtilits.displayMessage(bookings.this, response.body().getMsg() );
+                            AppUtilits.displayMessage(bookings.this, "No bookings exist." );
                         }
                     }else {
                         AppUtilits.displayMessage(bookings.this, getString(R.string.network_error));

@@ -4,6 +4,7 @@ package com.example.picha_clear.WebServices;
 
 import com.example.picha_clear.beanResponse.AddNewAddress;
 import com.example.picha_clear.beanResponse.AddtoCart;
+import com.example.picha_clear.beanResponse.BookingPaymentsMadeRes;
 import com.example.picha_clear.beanResponse.BookingsPaymentRes;
 import com.example.picha_clear.beanResponse.BookingsRes;
 import com.example.picha_clear.beanResponse.CamerasProductRes;
@@ -20,6 +21,7 @@ import com.example.picha_clear.beanResponse.OrderSummary;
 import com.example.picha_clear.beanResponse.PlaceOrder;
 import com.example.picha_clear.beanResponse.ProductDetail_Res;
 import com.example.picha_clear.beanResponse.TypesRes;
+import com.example.picha_clear.beanResponse.UpdatePriceRes;
 import com.example.picha_clear.beanResponse.UserSignInRes;
 import com.example.picha_clear.beanResponse.clearbalanceAPI;
 import com.example.picha_clear.beanResponse.codeAPI;
@@ -275,6 +277,27 @@ public interface ServiceInterface {
     @POST("picha_clear/getTypes.php")
     Call<TypesRes> TypesResCall(
             @Part("securecode") RequestBody securecode
+    );
+
+    // get booking payments
+    @Multipart
+    @POST("picha_clear/getbooking_payment.php")
+    Call<BookingPaymentsMadeRes>BookingsPaymentMadeRescall(
+            @Part("securecode") RequestBody securecode,
+            @Part("booking_id") RequestBody booking_id
+
+    );
+
+    // make update booking payment
+    @Multipart
+    @POST("picha_clear/update_booking_pay.php")
+    Call<UpdatePriceRes> UpdatePriceRescall(
+            @Part("securecode") RequestBody securecode,
+            @Part("user_id") RequestBody user_id,
+            @Part("booking_id") RequestBody booking_id,
+            @Part("code") RequestBody code,
+            @Part("payment_amount") RequestBody payment_amount
+
     );
 
 

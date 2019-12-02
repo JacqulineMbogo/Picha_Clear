@@ -52,7 +52,7 @@ public class types_adapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
         final types_model model =  types_models.get(position);
 
-        ((typesView) holder).location_id.setText(model.getType_cost());
+        ((typesView) holder).location_id.setText(model.getType_id());
         ((typesView)holder).location_name.setText(model.getType_name());
 
 

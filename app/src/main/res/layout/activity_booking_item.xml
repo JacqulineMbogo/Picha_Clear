@@ -79,10 +79,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/order_date"
+        android:id="@+id/location"
+        android:layout_below="@+id/booking_type"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/black"
-        android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:layout_marginBottom="@dimen/padding_small"
         android:layout_marginTop="@dimen/padding_small"/>
@@ -91,7 +91,7 @@
         android:id="@+id/receiptstext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/order_date"
+        android:layout_below="@id/location"
 
         android:layout_marginTop="34dp"
         android:layout_marginEnd="10dp"
@@ -108,7 +108,7 @@
         android:id="@+id/booking_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/order_date"
+        android:layout_below="@id/location"
         android:layout_marginTop="34dp"
 
         android:layout_marginBottom="@dimen/padding_small"
@@ -124,7 +124,7 @@
         android:id="@+id/viewdetails"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/order_date"
+        android:layout_below="@id/location"
         android:layout_marginTop="34dp"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="@dimen/padding_small"

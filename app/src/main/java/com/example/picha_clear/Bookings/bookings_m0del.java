@@ -2,17 +2,34 @@ package com.example.picha_clear.Bookings;
 
 public class bookings_m0del {
 
-    private String  booking_id,booking_type,booking_date_created,booking_date_set,booking_duration,booking_status;
+    private String  booking_id,booking_type,booking_date_created,booking_date_set,booking_duration,booking_status, booking_totalprice,location;
 
-    public bookings_m0del(String booking_id, String booking_type, String booking_date_created, String booking_date_set, String booking_duration, String booking_status) {
+    public bookings_m0del(String booking_id, String booking_type, String booking_date_created, String booking_date_set, String booking_duration, String booking_status, String booking_totalprice, String location) {
         this.booking_id = booking_id;
         this.booking_type = booking_type;
         this.booking_date_created = booking_date_created;
         this.booking_date_set = booking_date_set;
         this.booking_duration = booking_duration;
         this.booking_status = booking_status;
+        this.booking_totalprice = booking_totalprice;
+        this.location= location;
     }
 
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public String getBooking_totalprice() {
+        return booking_totalprice;
+    }
+
+    public void setBooking_totalprice(String booking_totalprice) {
+        this.booking_totalprice = booking_totalprice;
+    }
 
     public String getBooking_id() {
         return booking_id;

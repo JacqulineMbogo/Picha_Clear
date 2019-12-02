@@ -5,6 +5,7 @@ import com.example.picha_clear.BuildConfig;
 import com.example.picha_clear.Utility.Constant;
 import com.example.picha_clear.beanResponse.AddNewAddress;
 import com.example.picha_clear.beanResponse.AddtoCart;
+import com.example.picha_clear.beanResponse.BookingPaymentsMadeRes;
 import com.example.picha_clear.beanResponse.BookingsPaymentRes;
 import com.example.picha_clear.beanResponse.BookingsRes;
 import com.example.picha_clear.beanResponse.CamerasProductRes;
@@ -21,6 +22,7 @@ import com.example.picha_clear.beanResponse.OrderSummary;
 import com.example.picha_clear.beanResponse.PlaceOrder;
 import com.example.picha_clear.beanResponse.ProductDetail_Res;
 import com.example.picha_clear.beanResponse.TypesRes;
+import com.example.picha_clear.beanResponse.UpdatePriceRes;
 import com.example.picha_clear.beanResponse.UserSignInRes;
 import com.example.picha_clear.beanResponse.clearbalanceAPI;
 import com.example.picha_clear.beanResponse.codeAPI;
@@ -195,6 +197,16 @@ public class ServiceWrapper  {
     // make new booking payment
     public Call<BookingsPaymentRes> NewBookingPaymentRescall(String securcode, String user_id , String booking_id, String code,String payment_amount ){
         return mServiceInterface.NewBookingPaymentRescall(convertPlainString(securcode), convertPlainString(user_id), convertPlainString(booking_id),  convertPlainString(code),  convertPlainString(payment_amount) );
+    }
+
+    // make update booking payment
+    public Call<UpdatePriceRes> UpdatePriceRescall(String securcode, String user_id , String booking_id, String code, String payment_amount ){
+        return mServiceInterface.UpdatePriceRescall(convertPlainString(securcode), convertPlainString(user_id), convertPlainString(booking_id),  convertPlainString(code),  convertPlainString(payment_amount) );
+    }
+
+    // make  booking payment made
+    public Call<BookingPaymentsMadeRes>BookingsPaymentMadeRescall(String securcode, String booking_id ){
+        return mServiceInterface.BookingsPaymentMadeRescall(convertPlainString(securcode),  convertPlainString(booking_id));
     }
 
     ///  get location

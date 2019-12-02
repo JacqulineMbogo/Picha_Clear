@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/payment"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:padding="@dimen/padding_medium"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/paymenttext"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:padding="@dimen/padding_medium"/>
+
+    <TextView
+        android:id="@+id/cleartext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/clearbalance"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:padding="@dimen/padding_medium"/>
+
+
+    <LinearLayout
+        android:id="@+id/amountlinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_large"
+        android:padding="@dimen/padding_medium"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Amount"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textStyle="bold"
+            />
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/total_amount"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+
+            />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/mpesalinear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_large"
+        android:padding="@dimen/padding_medium"
+         android:orientation="horizontal"
+        >
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/mpesacode"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textStyle="bold"
+            />
+        <EditText
+            android:id="@+id/mpesacode"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:inputType="textCapCharacters"
+            android:layout_height="wrap_content"
+
+
+            />
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_large"
+        android:padding="@dimen/padding_medium"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:background="@drawable/rounded_blue"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:padding="@dimen/padding_medium"
+            android:layout_margin="@dimen/padding_large"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"
+            android:background="@drawable/rounded_blue"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:padding="@dimen/padding_medium"
+            android:layout_margin="@dimen/padding_large"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"/>
+
+
+    </LinearLayout>
+</LinearLayout>
